@@ -2466,6 +2466,11 @@ internal fun AboutSettingsScreen(
                                 color = MaterialTheme.colorScheme.onSurface,
                             )
                             Text(
+                                text = stringResource(R.string.fork_attribution),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                            Text(
                                 text = androidx.core.text.BidiFormatter.getInstance()
                                     .unicodeWrap("$versionName ($versionCode)", androidx.core.text.TextDirectionHeuristicsCompat.LTR),
                                 style = MaterialTheme.typography.labelLarge,

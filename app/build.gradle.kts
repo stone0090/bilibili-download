@@ -18,8 +18,8 @@ plugins {
     alias(libs.plugins.aboutlibraries.android)
 }
 
-val appReleaseVersionCode = 14
-val appReleaseVersionName = "3.0"
+val appReleaseVersionCode = 1
+val appReleaseVersionName = "0.1.0"
 val releaseAbiSplits = listOf("arm64-v8a", "armeabi-v7a", "x86", "x86_64")
 
 abstract class RenameReleaseApksTask : DefaultTask() {
@@ -70,7 +70,7 @@ abstract class RenameReleaseApksTask : DefaultTask() {
                 return@forEach
             }
 
-            val targetFileName = "BiliTools-v${appVersionName.get()}-$abiLabel.apk"
+            val targetFileName = "OfflineVideo-v${appVersionName.get()}-$abiLabel.apk"
             expectedFileNames += targetFileName
 
             moveIfNeeded(
@@ -217,11 +217,12 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.happycola233.bilitools"
+        applicationId = "io.github.stone0090.offlinevideo"
         minSdk = 29
         targetSdk = 36
         versionCode = appReleaseVersionCode
         versionName = appReleaseVersionName
+        buildConfigField("boolean", "UPSTREAM_UPDATES_ENABLED", "false")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -242,6 +243,7 @@ android {
         }
     }
     buildFeatures {
+        buildConfig = true
         viewBinding = true
         compose = true
     }

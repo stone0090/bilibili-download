@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BiliTools"
+rootProject.name = "OfflineVideo"
 include(":app")

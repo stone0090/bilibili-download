@@ -1,3 +1,11 @@
+# 随身视频（开发测试版）
+
+基于 [happycola233/BiliTools](https://github.com/happycola233/BiliTools) 的独立 Android 派生版本，第一期支持 B 站。版本 0.1.0，包名 `io.github.stone0090.offlinevideo`（debug 包追加 `.debug`）。保留上游 GPL-3.0-or-later 许可证、源码署名和开源组件说明。
+
+本分支的构建方法、验证记录及后续平台接入边界见 [开发说明](docs/fork/DEVELOPMENT.md)。下方是上游原始说明，其中发布链接指向原项目，不是本分支安装包。
+
+---
+
 <div align="center">
   <img src="./docs/assets/BiliTools_icon_rounded.png" width="112" alt="BiliTools Logo" />
   <h1>BiliTools for Android</h1>

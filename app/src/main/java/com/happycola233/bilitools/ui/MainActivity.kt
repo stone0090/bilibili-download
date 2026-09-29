@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
                 if (launchFinished.value) com.happycola233.bilitools.ui.diagnostics.DiagnosticStartupPrompt()
                 MainScreen(
                     activity = this@MainActivity,
-                    checkForUpdates = savedInstanceState == null,
+                    checkForUpdates = com.happycola233.bilitools.BuildConfig.UPSTREAM_UPDATES_ENABLED && savedInstanceState == null,
                     settings = settings,
                     selectedTabIndex = selectedTabIndexProvider,
                     onTabSelected = selectTab,

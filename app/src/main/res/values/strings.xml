@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">BiliTools</string>
+    <string name="app_name" translatable="false">随身视频</string>
     <string name="nav_parse">解析</string>
     <string name="nav_downloads">下载</string>
     <string name="nav_me">我</string>
@@ -636,4 +636,6 @@
     <string name="diagnostic_clear_confirm">清除</string>
     <string name="diagnostic_privacy">仅本机保存，由你选择分享。密码、Cookie 等登录凭据不写入，账号 UID 已隐藏。</string>
     <string name="diagnostic_close">关闭诊断报告</string>
+    <string name="fork_attribution">基于 BiliTools 开源项目修改 · GPL-3.0-or-later</string>
+    <string name="fork_manual_update">此测试版请通过安装包更新</string>
 </resources>

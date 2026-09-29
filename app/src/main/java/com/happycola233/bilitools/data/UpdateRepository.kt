@@ -87,6 +87,12 @@ class UpdateRepository(
 
     suspend fun checkForUpdate(): UpdateCheckResult = withContext(Dispatchers.IO) {
         val currentVersion = normalizeVersion(currentVersionName())
+        // 独立签名的派生版本不能安装上游 APK 作为更新。
+        if (!com.happycola233.bilitools.BuildConfig.UPSTREAM_UPDATES_ENABLED) {
+            return@withContext UpdateCheckResult.Failed(
+                currentVersion, strings.get(R.string.fork_manual_update),
+            )
+        }
         runCatching {
             val latest = fetchLatestRelease()
             if (compareVersions(currentVersion, latest.versionName) < 0) {
